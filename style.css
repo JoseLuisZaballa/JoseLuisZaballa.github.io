@@ -1,0 +1,182 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #333333;
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.apparel-ecommerce {
+    font-size: 28px;
+}
+
+.soft-breathable {
+    font-size: 18px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding-right: 40px;
+}
+  
+.header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+  
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.header li {
+    margin: 0 10px;
+}
+  
+.header img {
+    display: block;
+    width: 60px;
+    height: auto;
+}
+
+body {
+    padding-top: 100px; 
+}
+
+/* Define styles for the cart container */
+#cart-container {
+    position: fixed;
+    right: 0;
+    top:80px;
+    width: 300px;
+    height: 100%;
+    background-color: #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
+}
+
+/* Define styles for the cart item */
+.cart-item {
+    top: 80px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 2px #ccc;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+#product-cards {
+    max-width: 960px; /* Set the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.apparel-category {
+    width: 22%; /* Set the width of each card */
+    margin: 10px; /* Add some margin around each card */
+    flex-shrink: 0; /* Prevent cards from shrinking and overlapping */
+}
+
+.card {
+    height: 450px; /* Set a fixed height for the cards */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid black;
+      border-radius: 5px;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+}
+
+.card-text {
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+button:hover {
+    background-color: #A9A9A9;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Make the image cover the entire card */
+}
+
+.filters {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #F7F7F7;
+    font-family: Arial, sans-serif;
+}
+  
+.nav-item {
+    list-style: none;
+    margin: 5px 0;
+}
+  
+.nav-filter {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+  
+.nav-filter:hover {
+    background-color: #EEE;
+} 

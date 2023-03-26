@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Apparel Ecommerce Website</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+		<script src="index.js"></script>
+
+		<!-- Header -->
+		<nav class="header">
+			<div class="header-left">
+				<div class="apparel-ecommerce">Apparel Ecommerce</div>
+				<div class="soft-breathable">Soft and breathable</div>
+			</div>
+			<div class="header-right">
+				<a class="nav-link" href="#">Sign In</a>
+				<a class="cart-image" href="#" data-toggle="modal" data-target="#cartModal"><img src="cart.png" alt="Cart" width="60"></a>
+			</div>
+		</nav>
+
+		<!-- Filters -->
+		<nav class="filters">
+			<ul class="filters">
+				<li class="nav-item">
+					<a class="nav-filter" href="#" onclick="filterApparel('all') ">All</a>
+				</li>  
+				<li class="nav-item">
+					<a class="nav-filter" href="#" onclick="filterApparel('body_suit') ">Body Suits</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-filter" href="#" onclick="filterApparel('bra') ">Bras</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-filter" href="#" onclick="filterApparel('jeans')">Jeans</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-filter" href="#" onclick="filterApparel('shirt') ">Shirts</a>
+				</li>           
+				<li class="nav-item">
+					<a class="nav-filter" href="#" onclick="filterApparel('sneakers') ">Sneakers</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Cart container that is initially hidden -->
+		<div id="cart-container" class="cart-container" style="display: none;">
+			<h2>Your cart is empty</h2>
+			<div id="cart-items"></div>
+			<div id="cart-total-container" class="cart-total" style="display: none;">
+				<div>Total: <span id="cart-total-price">$0.00</span></div>
+				<button onclick="buyNow()">Buy Now</button>
+			</div>
+			<div id="cart-empty-message" style="display: none;">Your cart is empty</div>
+		</div>
+		<script>
+		// Get cart image element
+		var cartImage = document.querySelector(".cart-image img");
+
+		// Get cart container element
+		var cartContainer = document.getElementById("cart-container");
+
+		// Add click event listener to cart image
+		cartImage.addEventListener("click", function() {
+			// Toggle cart container display property
+			if (cartContainer.style.display === "block") {
+				cartContainer.style.display = "none";
+			} else {
+				cartContainer.style.display = "block";
+			}
+		});
+		</script>
+
+		<!-- Product Containers -->
+		<div id="product-cards">
+			<div class="row">
+				<!-- Call the createProductCard function for each product -->
+				<script>
+				for (var i = 0; i < products.length; i++) {
+					createProductCard(products[i]);
+				}
+				</script>
+			</div>
+		</div>
+
+	</body>
+</html>
+
